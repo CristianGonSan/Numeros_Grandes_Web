@@ -1,0 +1,132 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+    background-image: url(img/fondo.jpg);
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+#divPrincipal{
+    display: grid;
+    grid-template-areas: 
+    'cabecera cabecera' 
+    'contenido lateral'
+    'footer footer';
+    grid-template-columns: auto 20%;
+    grid-template-rows: 15% auto 5%;
+    height: 100vh;
+    color: white;
+}
+
+#divCabecera{
+    grid-area: cabecera;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+}
+
+#divContenido{
+    grid-area: contenido;
+    border: 1px solid #68757B;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#numero{
+    font-family: monospace;
+    font-size: 20px;
+    width: 99.7%;
+    resize: none;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+}
+
+#divTexto{
+    font-family: monospace;
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+}
+
+#divLateral{
+    grid-area: lateral;
+    border: 1px solid #68757B;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 10px 10px 10px 0px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#divFooter{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #68757B;
+    font-size: 20px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 900px){
+    #divPrincipal{
+        grid-template-areas: 
+        'cabecera' 
+        'contenido'
+        'lateral'
+        'footer';
+        grid-template-columns: auto;
+        grid-template-rows: 80px auto auto 5%;
+        height: 100vh;
+    }
+
+    #divCabecera{
+        font-size: 30px;
+    }
+
+    #divTexto{
+        font-size: 20px;
+    }
+
+    #divLateral{
+        margin: 0px 10px 10px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #divPrincipal{
+        grid-template-areas: 
+        'cabecera' 
+        'contenido'
+        'lateral'
+        'footer';
+        grid-template-columns: auto;
+        grid-template-rows: 65px auto auto 5%;
+        height: 100vh;
+    }
+
+    #divCabecera{
+        font-size: 15px;
+    }
+    
+    p{
+        font-size: 15px;
+    }
+}

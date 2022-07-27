@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristian Gonzalez Santos">
+    <meta name="og:image" content="img/fondo.jpg"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="readNumbers.js" defer></script>
+    <title>Numeros Grandes</title>
+</head>
+<body>
+    <div id="divPrincipal">
+        <div id="divCabecera">
+            <header>
+                <h1>Numeros Grandes</h1>
+            </header>
+        </div>        
+        
+        <div id="divContenido">
+            <h2>Escritura de numeros grandes</h2><br>
+            <label id="label" for="numero">Cifra:</label><br>
+            <input id="numero" name="numero" maxlength="126" placeholder="Ingrese cifra" onkeypress="return isNumberKey(event)"/>
+            <hr>
+            <button id="boton" onclick="traducir()">Pronunciar</button>
+            <button id="borrar" onclick="borrar()">Borrar</button>
+            <hr>
+            <div id="divTexto">Cero</div>
+            <hr>
+            <p>Maximo 126 digitos, pues ya no existen mas nombres en el español.</p>
+        </div>
+
+        <div id="divLateral">
+            <aside>
+                <h2>Vigitillón</h2>
+                <p>El vigitillon el el numero mas grande que se puede nombrar sin recurrir a adstracciones como lo es el Gúgol (10<sup>100</sup>), que en su forma ¨normal¨ seria ¨mil sexdecillones¨.
+                <br><br>
+                <p>Segun la RAE no existen nombres despues del vigitillon, pues no son de uso comun y nadie los utiliza, esto es diferente en la escla grande usada por el idioma ingles</p>
+            </aside>
+        </div>
+        <div id="divFooter">
+            <p>Ningun Derecho reservado - 2022</p>
+        </div>
+    </div>
+</body>
+</html>
