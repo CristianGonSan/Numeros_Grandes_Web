@@ -232,7 +232,7 @@ function isNumberKey(evt){
         traducir();
     }else{
         if (charCode > 31 && (charCode < 48 || charCode > 57)){
-            return false;
+            evt.preventDefault();
         }
         else{
             return true;
